@@ -1,14 +1,14 @@
 import 'package:acc/models/results/courses.dart';
 
-class Fetch {
+class FetchCourses {
   bool success;
   List<Courses> results;
   int count;
 
-  Fetch({this.success = false, this.results = const [], this.count = 0});
+  FetchCourses({this.success = false, this.results = const [], this.count = 0});
 
-  factory Fetch.formJson(Map<String, dynamic> json) {
-    return Fetch(
+  factory FetchCourses.formJson(Map<String, dynamic> json) {
+    return FetchCourses(
         success: json['success'],
         results: json['results'],
         count: json['count']);
