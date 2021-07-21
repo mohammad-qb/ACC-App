@@ -1,0 +1,24 @@
+import 'package:acc/models/fetch/fetchCourses.dart';
+import 'package:acc/services/courses.dart';
+import 'package:get/get.dart';
+
+class CoursesController extends GetxController {
+  var fetchSuccess = FetchCourses().obs;
+  var fetchError = Error().obs;
+
+  var loading = false.obs;
+
+  void fetchCourses() async {
+    loading(true);
+    var response = await CoursesServices.fetchCourses();
+    if (response != null) {
+      if (response is FetchCourses) {
+        fetchSuccess.value = response;
+        loading(false);
+      } else if (response is Error) {
+        fetchError.value = response;
+        loading(false);
+      }
+    }
+  }
+}
