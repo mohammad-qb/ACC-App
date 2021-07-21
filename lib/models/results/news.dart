@@ -16,7 +16,7 @@ class News {
       title: json['title'],
       description: json['description'],
       image: json['image'],
-      dateTime: json['dateTime'],
+      dateTime: json['date_time'],
     );
   }
 }

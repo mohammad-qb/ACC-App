@@ -11,7 +11,14 @@ class FetchEducationalStaff {
   factory FetchEducationalStaff.formJson(Map<String, dynamic> json) {
     return FetchEducationalStaff(
         success: json['success'],
-        results: json['results'],
+        results: parseEducationalStaff(json),
         count: json['count']);
+  }
+
+  static List<EducationalStaff> parseEducationalStaff(json) {
+    var list = json['results'] as List;
+    List<EducationalStaff> educationalStaff =
+        list.map((e) => EducationalStaff.formJson(e)).toList();
+    return educationalStaff;
   }
 }

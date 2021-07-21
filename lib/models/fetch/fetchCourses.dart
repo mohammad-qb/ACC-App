@@ -10,7 +10,13 @@ class FetchCourses {
   factory FetchCourses.formJson(Map<String, dynamic> json) {
     return FetchCourses(
         success: json['success'],
-        results: json['results'],
+        results: parseCourses(json),
         count: json['count']);
+  }
+
+  static List<Courses> parseCourses(json) {
+    var list = json['results'] as List;
+    List<Courses> courses = list.map((e) => Courses.formJson(e)).toList();
+    return courses;
   }
 }

@@ -11,7 +11,14 @@ class FetchHelperStudents {
   factory FetchHelperStudents.formJson(Map<String, dynamic> json) {
     return FetchHelperStudents(
         success: json['success'],
-        results: json['results'],
+        results: parseHelperStudents(json),
         count: json['count']);
+  }
+
+  static List<HelperStudents> parseHelperStudents(json) {
+    var list = json['results'] as List;
+    List<HelperStudents> helperStudents =
+        list.map((e) => HelperStudents.formJson(e)).toList();
+    return helperStudents;
   }
 }

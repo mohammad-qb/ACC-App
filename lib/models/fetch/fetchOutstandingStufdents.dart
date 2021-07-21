@@ -14,4 +14,11 @@ class FetchOutstandingStudents {
         results: json['results'],
         count: json['count']);
   }
+
+  static List<OutstandingStudents> parseOutstandingStudents(json) {
+    var list = json['results'] as List;
+    List<OutstandingStudents> outstandingStudents =
+        list.map((e) => OutstandingStudents.formJson(e)).toList();
+    return outstandingStudents;
+  }
 }

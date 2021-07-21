@@ -29,6 +29,7 @@ class _LayoutState extends State<Layout> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
             title: Container(
               child: Image.asset('assets/images/accLogo.png'),
               width: 40,
@@ -52,7 +53,8 @@ class _LayoutState extends State<Layout> {
               BottomNavigationBarItem(
                   icon: FaIcon(FontAwesomeIcons.home), label: "الرئيسية"),
               BottomNavigationBarItem(
-                  icon: FaIcon(FontAwesomeIcons.bookmark), label: "من نحن"),
+                  icon: FaIcon(FontAwesomeIcons.solidBookmark),
+                  label: "من نحن"),
               BottomNavigationBarItem(
                   icon: FaIcon(FontAwesomeIcons.book), label: "المواد"),
               BottomNavigationBarItem(

@@ -1,4 +1,4 @@
-import 'package:acc/models/video.dart';
+import 'package:acc/models/results/video.dart';
 
 class Courses {
   int id;

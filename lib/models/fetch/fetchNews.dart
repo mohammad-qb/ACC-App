@@ -10,7 +10,13 @@ class FetchNews {
   factory FetchNews.formJson(Map<String, dynamic> json) {
     return FetchNews(
         success: json['success'],
-        results: json['results'],
+        results: parseNews(json),
         count: json['count']);
+  }
+
+  static List<News> parseNews(json) {
+    var list = json['results'] as List;
+    List<News> news = list.map((e) => News.formJson(e)).toList();
+    return news;
   }
 }
