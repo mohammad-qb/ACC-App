@@ -8,6 +8,12 @@ class ClubMembersController extends GetxController {
 
   var loading = false.obs;
 
+  @override
+  onInit() {
+    fetchClubMembers();
+    super.onInit();
+  }
+
   void fetchClubMembers() async {
     loading(true);
     var response = await ClubMemberServices.fetchClubMembers();

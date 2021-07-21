@@ -8,6 +8,12 @@ class HelperStudentsController extends GetxController {
 
   var loading = false.obs;
 
+  @override
+  onInit() {
+    fetchHelperStudents();
+    super.onInit();
+  }
+
   void fetchHelperStudents() async {
     loading(true);
     var response = await HelperStudentsServices.fetchHelperStudents();

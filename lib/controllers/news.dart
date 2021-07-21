@@ -8,6 +8,12 @@ class NewsController extends GetxController {
 
   var loading = false.obs;
 
+  @override
+  onInit() {
+    fetchNews();
+    super.onInit();
+  }
+
   void fetchNews() async {
     loading(true);
     var response = await NewsServices.fetchNews();

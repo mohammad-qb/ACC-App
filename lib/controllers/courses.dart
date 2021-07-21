@@ -8,6 +8,12 @@ class CoursesController extends GetxController {
 
   var loading = false.obs;
 
+  @override
+  onInit() {
+    fetchCourses();
+    super.onInit();
+  }
+
   void fetchCourses() async {
     loading(true);
     var response = await CoursesServices.fetchCourses();

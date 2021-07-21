@@ -8,6 +8,12 @@ class OutstandingStudentsController extends GetxController {
 
   var loading = false.obs;
 
+  @override
+  onInit() {
+    fetchOutstandingStudents();
+    super.onInit();
+  }
+
   void fetchOutstandingStudents() async {
     loading(true);
     var response = await OutstandingStudentsServices.fetchOutstandingStudents();

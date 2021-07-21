@@ -8,6 +8,12 @@ class EducationalStaffController extends GetxController {
 
   var loading = false.obs;
 
+  @override
+  onInit() {
+    fetchEducationalStaff();
+    super.onInit();
+  }
+
   void fetchEducationalStaff() async {
     loading(true);
     var response = await EducationalStaffServices.fetchEducationalStaff();
