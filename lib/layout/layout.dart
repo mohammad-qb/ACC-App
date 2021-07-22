@@ -17,9 +17,11 @@ class Layout extends StatefulWidget {
 
 class _LayoutState extends State<Layout> {
   int _selectedPage = 0;
+  double elevation = 5;
   void _onItemTapped(int index) {
     setState(() {
       _selectedPage = index;
+      _selectedPage == 2 ? elevation = 0 : elevation = 5;
     });
   }
 
@@ -29,6 +31,7 @@ class _LayoutState extends State<Layout> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
+            elevation: elevation,
             backgroundColor: Colors.white,
             title: Container(
               child: Image.asset('assets/images/accLogo.png'),

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:acc/controllers/clubMembers.dart';
 import 'package:acc/controllers/clubMembers.dart';
+import 'package:acc/controllers/courses.dart';
 import 'package:acc/controllers/news.dart';
 import 'package:acc/layout/layout.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   NewsController newsController = Get.put(NewsController());
   ClubMembersController clubMembersController =
       Get.put(ClubMembersController());
+  CoursesController coursesController = Get.put(CoursesController());
   @override
   void initState() {
     super.initState();
