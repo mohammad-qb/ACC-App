@@ -1,7 +1,13 @@
 import 'package:acc/models/results/clubMembers.dart';
 import 'package:acc/models/results/courses.dart';
+import 'package:acc/models/results/educationStaff.dart';
+import 'package:acc/models/results/helperStudents.dart';
+import 'package:acc/models/results/outstandingStudents.dart';
 import 'package:acc/widgets/club_member_card.dart';
 import 'package:acc/widgets/course_card.dart';
+import 'package:acc/widgets/educational_satff_card.dart';
+import 'package:acc/widgets/helper_students_card.dart';
+import 'package:acc/widgets/outstanding_students_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -28,6 +34,14 @@ class CustomeGridView extends StatelessWidget {
             return ClubMemberCard(clubMember: list[index] as ClubMembers);
           } else if (dataType == 'courses') {
             return CourseCard(course: list[index] as Courses);
+          } else if (dataType == 'educationalStaff') {
+            return EducationalStaffCard(
+                educationalStaff: list[index] as EducationalStaff);
+          } else if (dataType == 'outstandingStudents') {
+            return OutstandingStudentsCard(
+                students: list[index] as OutstandingStudents);
+          } else if (dataType == 'helperStudents') {
+            return HelperStudentsCard(students: list[index] as HelperStudents);
           } else {
             return Container();
           }

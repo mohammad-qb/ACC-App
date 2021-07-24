@@ -1,0 +1,65 @@
+import 'package:acc/config/config.dart';
+import 'package:acc/constants/colors.dart';
+import 'package:acc/models/results/educationStaff.dart';
+import 'package:acc/widgets/CustomeText.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class EducationalStaffCard extends StatelessWidget {
+  final EducationalStaff educationalStaff;
+  const EducationalStaffCard({Key? key, required this.educationalStaff})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: educationalStaff.image != 'No image'
+                      ? NetworkImage(IMAGE_URL + educationalStaff.image.trim())
+                      : AssetImage('assets/images/accLogo.png')
+                          as ImageProvider,
+                  fit: BoxFit.cover,
+                ),
+              )),
+          SizedBox(
+            height: 10,
+          ),
+          CustomeText(
+              text:
+                  educationalStaff.firstName + " " + educationalStaff.lastName),
+          GestureDetector(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.grey.shade200),
+              child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                FaIcon(
+                  FontAwesomeIcons.facebookF,
+                  size: 12,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                CustomeText(
+                  text: educationalStaff.firstName +
+                      " " +
+                      educationalStaff.lastName,
+                  fontSize: 12,
+                  color: greyColor,
+                )
+              ]),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

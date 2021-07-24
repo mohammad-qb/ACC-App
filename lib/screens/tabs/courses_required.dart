@@ -14,7 +14,7 @@ class CoursesRequiredTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: EdgeInsets.all(20),
       child: GetBuilder<CoursesController>(
         init: CoursesController(),
         builder: (course) => ListView(shrinkWrap: false, children: [

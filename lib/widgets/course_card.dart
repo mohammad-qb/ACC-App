@@ -45,7 +45,7 @@ class CourseCard extends StatelessWidget {
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 5,
-                  blurRadius: 7,
+                  blurRadius: 20,
                   offset: Offset(0, 3),
                 )
               ],

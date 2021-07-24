@@ -3,7 +3,10 @@ import 'dart:async';
 import 'package:acc/controllers/clubMembers.dart';
 import 'package:acc/controllers/clubMembers.dart';
 import 'package:acc/controllers/courses.dart';
+import 'package:acc/controllers/educationalStaff.dart';
+import 'package:acc/controllers/helperStudents.dart';
 import 'package:acc/controllers/news.dart';
+import 'package:acc/controllers/outstandingStudents.dart';
 import 'package:acc/layout/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,6 +23,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
   ClubMembersController clubMembersController =
       Get.put(ClubMembersController());
   CoursesController coursesController = Get.put(CoursesController());
+  EducationalStaffController educationalStaffController =
+      Get.put(EducationalStaffController());
+  OutstandingStudentsController outstandingStudentsController =
+      Get.put(OutstandingStudentsController());
+  HelperStudentsController helperStudentsController =
+      Get.put(HelperStudentsController());
   @override
   void initState() {
     super.initState();

@@ -25,7 +25,6 @@ class CoursesController extends GetxController {
         response.results.forEach((e) => e.type == "اجباري"
             ? requiredCourses.add(e)
             : optionalCourses.add(e));
-        print(requiredCourses);
         loading(false);
       } else if (response is Error) {
         fetchError.value = response;

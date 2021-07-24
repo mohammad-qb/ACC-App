@@ -11,7 +11,7 @@ class FetchOutstandingStudents {
   factory FetchOutstandingStudents.formJson(Map<String, dynamic> json) {
     return FetchOutstandingStudents(
         success: json['success'],
-        results: json['results'],
+        results: parseOutstandingStudents(json),
         count: json['count']);
   }
 

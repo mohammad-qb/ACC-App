@@ -85,9 +85,18 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              CustomeGridView(
-                  list: clubMemberCard.fetchSuccess.value.results,
-                  dataType: 'club')
+              Container(
+                child: clubMemberCard.loading.value
+                    ? Center(
+                        child: CircularProgressIndicator(
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(primaryColor),
+                        ),
+                      )
+                    : CustomeGridView(
+                        list: clubMemberCard.fetchSuccess.value.results,
+                        dataType: 'club'),
+              )
             ],
           ),
         ]),
