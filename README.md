@@ -1,16 +1,32 @@
-# acc
+# ACC APP
 
-A new Flutter project.
+An app for Applied Computing Club(ACC) at Palestine Technical Univ(PTUK), helps students majoring in Applied Computing In terms of materials, getting to know the specialization, facilitating the learning process and understanding the specialization subjects decided for them.
 
-## Getting Started
+## App Pages
 
-This project is a starting point for a Flutter application.
+Loading Screen
+<img src="images/Screenshot_1627657253.png">
 
-A few resources to get you started if this is your first Flutter project:
+Home Screen
+<img src="images/Screenshot_1627657259.png">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+News Dialog
+<img src="images/Screenshot_1627657265.png">
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+About Screen
+<img src="images/Screenshot_1627657281.png">
+
+Required Courses Tab Screen
+<img src="images/Screenshot_1627657284.png">
+
+Optional Courses Tab Screen
+<img src="images/Screenshot_1627657288.png">
+
+Educational Staff Screen
+<img src="images/Screenshot_1627657296.png">
+
+Outstanding Students Screen
+<img src="images/Screenshot_1627657299.png">
+
+Helper Students Screen
+<img src="images/Screenshot_1627657303.png">
